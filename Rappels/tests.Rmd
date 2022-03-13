@@ -84,7 +84,7 @@ Sous R : `tseries::kpss.test` ou `urca::ur.kpss()`.
 
 # Auto.arima
 
-Il existe beaucoup d'algorithmes automatiques pour la détection automatique de modèles ARIMA (TRAMO étant un des plus connus). Ils permettent de trouver un ARIMA$(p,d,q)(P,D,Q)_m$. Décrivons ici l'algorithme utilisé dans `forecast::auto.arima()` :
+Il existe beaucoup d'algorithmes automatiques pour la détection automatique de modèles ARIMA (TRAMO étant un des plus connus). Ils permettent de trouver un ARIMA$(p,d,q)(P,D,Q)_m$. Décrivons ici l'algorithme utilisé dans `forecast::auto.arima()`^[Voir https://otexts.com/fpp3/arima-r.html par exemple.] :
 
 1. On choisit $D$ par un test de Canova-Hansen puis $d$ déterminé en utilisant des tests successifs de KPSS. Ils préfèrent utiliser des tests où ($H_0$) est l'absence de racine unitaire car les autres tests ont tendance à biaiser les résultats vers des modèles sur-différenciés.
 
