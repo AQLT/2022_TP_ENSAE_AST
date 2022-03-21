@@ -61,8 +61,8 @@ Tests de $(H_0):\rho = 1$ dans des modèles semi-paramétriques sous la forme :
 $$
 \begin{cases}
 X_t=\rho X_{t-1}+u_t\\
-X_t = c+\rho X_{t-1} \\
-X_t = c+bt+\rho X_{t-1}
+X_t = c+\rho X_{t-1}+u_t \\
+X_t = c+bt+\rho X_{t-1}+u_t
 \end{cases}
 $$
 avec $u_t$ un terme d'erreur très général.
@@ -80,7 +80,7 @@ Avec $\xi=0$ si pas de tendance déterministe, $r_0$ sert de constante et $u_t$ 
 
 On teste $(H_0):\sigma^2_u=0$ donc sous $(H_0)$ la série est *stationnaire* (différent autres tests).
 
-Sous R : `tseries::kpss.test` ou `urca::ur.kpss()`.
+Sous R : `tseries::kpss.test`ou `urca::ur.kpss()` (sans tendance par défaut).
 
 # Auto.arima
 
